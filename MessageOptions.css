@@ -1,0 +1,106 @@
+/* MessageOptions.css */
+.message-options-container {
+  position: relative;
+  display: inline-block;
+}
+
+.message-options-button {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s, background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message-bubble:hover .message-options-button {
+  opacity: 1;
+}
+
+.message-options-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Default menu position (for your messages - right side) */
+.message-options-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  z-index: 1000;
+  padding: 8px 0;
+  margin-top: 4px;
+}
+
+/* For left-aligned messages (others' messages), make menu appear on LEFT side */
+.message-container.other .message-options-menu {
+  left: 0;
+  right: auto;
+}
+
+/* For right-aligned messages (your messages), keep menu on RIGHT side */
+.message-container.own .message-options-menu {
+  right: 0;
+  left: auto;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: #333;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.option-item:hover {
+  background-color: #f5f5f5;
+}
+
+.option-item.edit {
+  color: #3b82f6;
+}
+
+.option-item.edit:hover {
+  background-color: #dbeafe;
+}
+
+.option-item.delete-for-me {
+  color: #4b5563;
+}
+
+.option-item.delete-for-me:hover {
+  background-color: #f3f4f6;
+}
+
+.option-item.delete-everyone {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.option-item.delete-everyone:hover {
+  background-color: #fee2e2;
+}
+
+.option-item.report {
+  color: #f59e0b;
+}
+
+.option-item.report:hover {
+  background-color: #fef3c7;
+}
